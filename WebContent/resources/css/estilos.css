@@ -1,0 +1,52 @@
+body {
+ background-image: url("../img/fondo7.jpg");
+}
+
+.letra{
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.8em;
+}
+
+.bottom{
+  font-family: 'Acme', sans-serif;
+  font-size: 2em;
+}
+
+.letra-carrousel{
+  font-family: 'Permanent Marker', cursive;
+}
+
+.footer {
+  position: initial;
+  margin-top: 5%;
+  left: 0;
+  bottom: 0;
+  padding: 3%;
+  width: 100%;
+  height: 10%;
+  background-color: #CC99FF;
+  color: grey;
+  text-align: center;
+  padding: 2%;
+}
+
+body, html {
+  height: 100%;
+  padding: 0; /* ¿por qué, carousel, por qué? */
+}
+.carousel {
+  height: 66%;
+  margin-bottom: 0; /* ¿por qué, carousel, por qué? */
+}
+.collapsibleNavbar{
+  background-color: #CC66CC;
+}
+
+.letra-menu{
+	font-family: 'Acme', sans-serif;
+	font-size: 1.2em;
+}
+
+.imagen-card{
+	height: 15rem;
+}
