@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"> 
+<h:head>
+  <meta charset="UTF-8"/>
+  <title>AdminHuellitas</title>
+  <link rel="shortcut icon" href="resources/img/icono.png" type="image/x-icon" />
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="resources/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="resources/bower_components/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="resources/bower_components/Ionicons/css/ionicons.min.css" />
+  <link rel="stylesheet" href="resources/dist/css/AdminLTE.min.css" />
+  <link rel="stylesheet" href="resources/dist/css/skins/_all-skins.min.css" />
+  <link rel="stylesheet" href="resources/bower_components/morris.js/morris.css" />
+  <link rel="stylesheet" href="resources/bower_components/jvectormap/jquery-jvectormap.css" />
+  <link rel="stylesheet" href="resources/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+  <link rel="stylesheet" href="resources/bower_components/bootstrap-daterangepicker/daterangepicker.css" />
+  <link rel="stylesheet" href="resources/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" />
+  <link rel="stylesheet" type="text/css" href="resources/css/estilos.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" />
+</h:head> 
+
+
+<body class="hold-transition skin-blue sidebar-mini"> 
+<div class="wrapper">
+
+  <header class="main-header">
+    <a href="admin.jsp" class="logo">
+      <span class="logo-mini"><b>AD</b>H</span>
+      <span class="logo-lg"><b>Admin</b> Huellitas</span>
+    </a>
+    <nav class="navbar navbar-static-top">
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Navegación de palanca</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <li class="dropdown messages-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-envelope-o"></i>
+              <span class="label label-success">4</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">Tienes 4 mensajes</li>
+              <li>
+                <ul class="menu">
+                  <li><!-- start message -->
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="resources/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image"/>
+                      </div>
+                      <h4>
+                        Equipo de apoyo
+                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                      </h4>
+                      <p>¿Por qué no comprar un nuevo tema impresionante?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="resources/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image"/>
+                      </div>
+                      <h4>
+                        AdminLTE Design Team
+                        <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="resources/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image" />
+                      </div>
+                      <h4>
+                        Developers
+                        <small><i class="fa fa-clock-o"></i> Today</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="resources/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image" />
+                      </div>
+                      <h4>
+                        Sales Department
+                        <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="resources/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image" />
+                      </div>
+                      <h4>
+                        Reviewers
+                        <small><i class="fa fa-clock-o"></i> 2 days</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer"><a href="#">See All Messages</a></li>
+            </ul>
+          </li>
+          <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-warning">10</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 10 notifications</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
+                      page and may cause design problems
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-users text-red"></i> 5 new members joined
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-user text-red"></i> You changed your username
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer"><a href="#">View all</a></li>
+            </ul>
+          </li>
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="resources/dist/img/user2-160x160.jpg" class="user-image" alt="User Image" />
+              <span class="hidden-xs">Shadia Ochoa</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="resources/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+                <p>
+                  Shadia Ochoa - Web Developer
+                  <small>Miembro Enero 2019</small>
+                </p>
+              </li>
+              <li class="user-footer">
+                <div class="pull-right">
+                  <a href="login.jsp" class="btn btn-default btn-flat">Cerrar Sesion</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <aside class="main-sidebar">
+    <section class="sidebar">
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="resources/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image"/>
+        </div>
+        <div class="pull-left info">
+          <p>Shadia Ochoa</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Buscar..." />
+          <span class="input-group-btn">
+           <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+          </span>
+        </div>
+      </form>
+   <ul class="sidebar-menu" data-widget="tree">
+    <li class="header">Navegacion Principal</li>
+    <li><a href="formPerro.xhtml"><i class="fa fa-circle-o"></i>Formulario perro</a></li>
+    <li><a href="registros.xhtml"><i class="fa fa-circle-o"></i>Agregar</a></li>
+    <li><a href="formAdoptador.xhtml"><i class="fa fa-circle-o"></i>Formulario Adoptador</a></li>
+    <li><a href="formPadrino.xhtml"><i class="fa fa-circle-o"></i>Formulario Padrino</a></li>
+    <li><a href="apadrinamiento.xhtml"><i class="fa fa-circle-o"></i>Apadrinamiento</a></li>
+    <li><a href="adopcion.xhtml"><i class="fa fa-circle-o"></i>Adopción</a></li>
+    <li><a href="listaPersonas.xhtml"><i class="fa fa-circle-o"></i>Lista de Adoptadores</a></li> 
+    <li><a href="listaPersonas.xhtml"><i class="fa fa-circle-o"></i>Lista de Padrinos</a></li>  
+   </ul>
+   </section>
+ </aside>
+ 
+ <div class="content-wrapper">
+    <section class="content" >
+      <div class="row">
+      <div class="col-md-2">
+        </div>
+ 		<div class="col-md-6">
+          <div class="box box-primary">
+            <div class="box-header with-border" align="center">
+              <h3 class="box-title">Formulario Padrino</h3>
+            </div>
+            <form role="form">
+              <div class="box-body">
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Fecha Registro</label>
+                  <input type="date" class="form-control" id="ejemploImputNombre" placeholder="" />
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Ciudad</label>
+                  <input type="text" class="form-control" placeholder=" " />
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nombre</label>
+                  <input type="text" class="form-control" id="ejemploImputNombre" placeholder="Nombre completo" />
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Cédula</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder=" " />
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Fecha de Nacimiento</label>
+                  <input type="date" class="form-control" id="ejemploImputNombre" placeholder=" " />
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Barrio de Residencia</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder=" " />
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Dirección de Residencia</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder=" " />
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Email</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="ejemplo@gmail.com" />
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Teléfono Fijo</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder=" " />
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Teléfono Celular</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder=" " />
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Profesión</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder=" " />
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Trabajo Actual</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder=" " />
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">¿Qué te motivó a apadrinar?</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder=" " />
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">¿Te gustaría apadrinar más de un perro?</label>
+                  <select class="form-control">
+                    <option>Selecciona-</option>
+                    <option>Si</option>
+                    <option>No</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">¿Ya has apadrinado a un perro antes?</label>
+                  <select class="form-control">
+                    <option>Selecciona-</option>
+                    <option>Si</option>
+                    <option>No</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">¿Nombre del perro en el que estas interesado?</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder=" " />
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">¿Por qué quieres adoptar un perro?</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder=" " />
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">¿Sabes la responsabilidad de apadrinar?</label>
+                  <select class="form-control">
+                    <option>Selecciona-</option>
+                    <option>Si</option>
+                    <option>No</option>
+                  </select>
+                </div>
+
+                   <div class="box-footer">
+                  <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+     </section>
+   </div>
+ 
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 1.0.0
+    </div>
+    <strong>Copyright &copy; 2019 <a href="https://google.com" target="_blank">Huellitas</a>.</strong> All rights
+    reserved.
+  </footer>
+  <div class="control-sidebar-bg"></div>
+</div>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script> $.widget.bridge('uibutton', $.ui.button);</script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/raphael/raphael.min.js"></script>
+<script src="bower_components/morris.js/morris.min.js"></script>
+<script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+<script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script src="bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
+<script src="bower_components/moment/min/moment.min.js"></script>
+<script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="bower_components/fastclick/lib/fastclick.js"></script>
+<script src="dist/js/adminlte.min.js"></script>
+<script src="dist/js/pages/dashboard.js"></script>
+<script src="dist/js/demo.js"></script>
+
+</body> 
+</html>

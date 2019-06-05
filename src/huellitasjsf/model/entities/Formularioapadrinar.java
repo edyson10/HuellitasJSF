@@ -28,15 +28,15 @@ public class Formularioapadrinar implements Serializable {
 
 	private String visitaspormes;
 
-	//bi-directional many-to-one association to Persona
-	@ManyToOne
-	@JoinColumn(name="cedula")
-	private Persona persona;
-
 	//bi-directional many-to-one association to Perro
 	@ManyToOne
 	@JoinColumn(name="nombreperro")
 	private Perro perro;
+
+	//bi-directional many-to-one association to Persona
+	@ManyToOne
+	@JoinColumn(name="cedula")
+	private Persona persona;
 
 	public Formularioapadrinar() {
 	}
@@ -89,20 +89,20 @@ public class Formularioapadrinar implements Serializable {
 		this.visitaspormes = visitaspormes;
 	}
 
-	public Persona getPersona() {
-		return this.persona;
-	}
-
-	public void setPersona(Persona persona) {
-		this.persona = persona;
-	}
-
 	public Perro getPerro() {
 		return this.perro;
 	}
 
 	public void setPerro(Perro perro) {
 		this.perro = perro;
+	}
+
+	public Persona getPersona() {
+		return this.persona;
+	}
+
+	public void setPersona(Persona persona) {
+		this.persona = persona;
 	}
 
 }

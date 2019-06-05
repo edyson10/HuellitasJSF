@@ -25,15 +25,15 @@ public class Apadrinar implements Serializable {
 	@Temporal(TemporalType.DATE)
 	private Date fechaInicio;
 
-	//bi-directional many-to-one association to Persona
-	@ManyToOne
-	@JoinColumn(name="cedula")
-	private Persona persona;
-
 	//bi-directional many-to-one association to Perro
 	@ManyToOne
 	@JoinColumn(name="nombre")
 	private Perro perro;
+
+	//bi-directional many-to-one association to Persona
+	@ManyToOne
+	@JoinColumn(name="cedula")
+	private Persona persona;
 
 	public Apadrinar() {
 	}
@@ -62,20 +62,20 @@ public class Apadrinar implements Serializable {
 		this.fechaInicio = fechaInicio;
 	}
 
-	public Persona getPersona() {
-		return this.persona;
-	}
-
-	public void setPersona(Persona persona) {
-		this.persona = persona;
-	}
-
 	public Perro getPerro() {
 		return this.perro;
 	}
 
 	public void setPerro(Perro perro) {
 		this.perro = perro;
+	}
+
+	public Persona getPersona() {
+		return this.persona;
+	}
+
+	public void setPersona(Persona persona) {
+		this.persona = persona;
 	}
 
 }
