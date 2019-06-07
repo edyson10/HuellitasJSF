@@ -12,8 +12,6 @@ public class PerroBean {
 	
 	private Perro perro = new Perro();
 	private Integer combo;
-
-	
 	
 	public Perro getPerro() {
 		return perro;
@@ -27,6 +25,7 @@ public class PerroBean {
 	public void setCombo(Integer combo) {
 		this.combo = combo;
 	}	
+	public static int test() {return 0;}
 	public List<Perro> listarPerros() {
 		PerroDAO peDao = new PerroDAO();
 		System.out.println(this.combo);

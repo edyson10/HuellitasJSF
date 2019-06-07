@@ -210,8 +210,8 @@
     <li><a href="formPerro.xhtml"><i class="fa fa-circle-o"></i>Formulario perro</a></li>
     <li><a href="apadrinamiento.xhtml"><i class="fa fa-circle-o"></i>Apadrinamiento</a></li>
     <li><a href="adopcion.xhtml"><i class="fa fa-circle-o"></i>Adopción</a></li>
-    <li><a href="listaPersonas.xhtml"><i class="fa fa-circle-o"></i>Lista de Adoptadores</a></li> 
-    <li><a href="listaPersonas.xhtml"><i class="fa fa-circle-o"></i>Lista de Padrinos</a></li>
+    <li><a href="listaAdopcion.xhtml"><i class="fa fa-circle-o"></i>Lista de Adoptadores</a></li> 
+    <li><a href="listaPadrinos.xhtml"><i class="fa fa-circle-o"></i>Lista de Padrinos</a></li>
     <li><a href="registros.xhtml"><i class="fa fa-circle-o"></i>Agregar</a></li>
    </ul>
    </section>
@@ -240,7 +240,7 @@
 		              <label for="estado">Raza</label>
     			<h:selectOneMenu class="form-control" id="Raaza" value="#{razaaBean.combo}">
 	              <f:selectItem itemValue="" itemLabel="-- Selecione --" />
-				  <f:selectItems value ="#{razaaBean.retornarRaza()}" var="raza" itemValue="#{raza.id_raza}" itemLabel="#{raza.nombre_Raza}" />                 
+				  <f:selectItems value ="#{razaaBean.retornarRaza()}" var="raza" itemValue="#{raza.idRaza}" itemLabel="#{raza.nombreRaza}" />                 
 				</h:selectOneMenu>
 		            </div>
 	      		</div>
