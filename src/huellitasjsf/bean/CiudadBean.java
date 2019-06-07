@@ -26,7 +26,7 @@ public class CiudadBean {
 		this.combo = combo;
 	}
 	
-	public List<Ciudad> retornarEnfermedad() {
+	public List<Ciudad> retornarCiudad() {
 		CiudadDAO ciuDao = new CiudadDAO();
 		System.out.println(this.combo);
 		return ciuDao.list();

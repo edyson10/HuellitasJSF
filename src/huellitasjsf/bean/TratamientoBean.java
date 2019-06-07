@@ -27,7 +27,7 @@ public class TratamientoBean {
 		this.combo = combo;
 	}
 	
-	public List<Tratamiento> retornarRaza(){
+	public List<Tratamiento> retornarTratamiento(){
 		TratamientoDAO tratamDAO = new TratamientoDAO();
 		System.out.println("Tamaño " +  tratamDAO.list().size());
 		return tratamDAO.list();

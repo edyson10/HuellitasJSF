@@ -8,7 +8,7 @@ import huellitasjsf.model.entities.Raza;
 
 @ManagedBean
 @SessionScoped
-public class RazaBean {
+public class RazaaBean {
 	
 	private Raza raza = new Raza();
 	private Integer combo;
@@ -28,7 +28,6 @@ public class RazaBean {
 	
 	public List<Raza> retornarRaza(){
 		RazaDAO rDAO = new RazaDAO();
-		System.out.println("Tamaño " + rDAO.list().size());
 		return rDAO.list();
 	}
 }
