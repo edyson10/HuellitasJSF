@@ -24,8 +24,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" />
 </h:head> 
 
-<jsf:bean id="mybean" class="co.ufps.edo.algo.Algo" scope="session"/>
-
 <body class="hold-transition skin-blue sidebar-mini"> 
 	<div class="wrapper">
 
@@ -232,31 +230,25 @@
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputPassword1">Perro</label>
-                  <h:selectOneMenu class="form-control" id="perro" value="#{PerroBean.combo}">
-       				<f:selectItem itemValue="#{PerroBean.}" itemLabel="-- Selecione --" />
-       				<f:selectItems value ="#{PerroBean.listarPerros()}" var="perro" itemValue="#{perro.nombre}" itemLabel="#{perro.nombre}"/>                 
+                  <h:selectOneMenu class="form-control" id="Peerro" value="#{perroBean.combo}">
+       				<f:selectItem itemValue="" itemLabel="-- Selecione --" />
+       				<f:selectItems value ="#{perroBean.listarPerros()}" var="perro" itemValue="#{perro.nombre}" itemLabel="#{perro.nombre}"/>                 
   				  </h:selectOneMenu>
                 </div>
 
                 <div class="form-group">
                   <label for="exampleInputPassword1">Cédula de la persona</label>
-                    <select class="form-control">
-                      <option>Selecciona-</option>
-                      <option>1111111116</option>
-                      <option>2222222227</option>
-                      <option>3123123123</option>
-                      <option>3423456645</option>
-                      <option>8797856474</option>
-                  	  </select>
+                    <h:selectOneMenu class="form-control" id="Persona" value="#{personaBean.combo}">
+       					<f:selectItem itemValue="" itemLabel="-- Selecione --" />
+       					<f:selectItems value ="#{personaBean.listarPersonas()}" var="personaa" itemValue="#{personaa.cedula}" itemLabel="#{personaa.cedula}"/>                 
+  				    </h:selectOneMenu>
                 </div>
                 
-                <div class="box-footer">
                 	<div class="form-group">
                   		<label for="exampleInputPassword1">Fecha inicio</label>
                   		<input type="date" name="fechaInicioApadri" class="form-control" placeholder=" " />
                 	</div>
                 	<button type="submit" class="btn btn-primary">Agregar Adopción</button>
-                </div>
               </div>
             </form>
           </div>

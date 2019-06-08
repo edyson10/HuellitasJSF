@@ -4,7 +4,7 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import huellitasjsf.model.DAO.PerroDAO;
-import huellitasjsf.model.entities.Perro;;
+import huellitasjsf.model.entities.Perro;
 
 @ManagedBean
 @SessionScoped
@@ -25,7 +25,7 @@ public class PerroBean {
 	public void setCombo(Integer combo) {
 		this.combo = combo;
 	}	
-	public static int test() {return 0;}
+	
 	public List<Perro> listarPerros() {
 		PerroDAO peDao = new PerroDAO();
 		System.out.println(this.combo);
