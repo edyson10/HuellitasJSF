@@ -238,9 +238,9 @@
 	          	<div class="form-group">
 		            <div class="form-label-group">
 		              <label for="estado">Raza</label>
-    			<h:selectOneMenu class="form-control" id="Raaza" value="#{razaaBean.combo}">
+    			<h:selectOneMenu class="form-control" id="Raza" value="#{RazaBean.combo}">
 	              <f:selectItem itemValue="" itemLabel="-- Selecione --" />
-				  <f:selectItems value ="#{razaaBean.retornarRaza()}" var="raza" itemValue="#{raza.idRaza}" itemLabel="#{raza.nombreRaza}" />                 
+				  <f:selectItems value ="#{razaBean.retornarRaza()}" var="raza" itemValue="#{raza.idRaza}" itemLabel="#{raza.nombreRaza}" />                 
 				</h:selectOneMenu>
 		            </div>
 	      		</div>
