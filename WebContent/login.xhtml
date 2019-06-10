@@ -28,22 +28,26 @@
 		<div class="login-box-body">
   			
             <h:form styleClass="form-signin" prependId="false">
-                <b:inputText value="#{LoginBean.ad.usuario}" id="nombre" placeholder="Usuario" >
+                <b:inputText value="#{loginBean.ad.usuario}" id="usuario" placeholder="Usuario" >
                     <f:facet name="prepend">
                         <b:icon name="user" />
                     </f:facet>
                 </b:inputText>
-                <b:inputText value="#{LoginBean.ad.password}" id="heroe" placeholder="Password" type="password">
+                <b:inputText value="#{loginBean.ad.password}" id="password" placeholder="Password" type="password">
                     <f:facet name="prepend">
                         <b:iconAwesome name="key" />
                     </f:facet>
                 </b:inputText>
                 <b:selectBooleanCheckbox value="true" caption="remember me"/>
-                <b:commandButton action="#{loginBean.validar()}" look="primary btn-block" value="Iniciar sesión" icon="log-in" size="lg"/>
+                <b:commandButton action="#{loginBean.iniciarSesion()}" look="primary btn-block" value="Iniciar sesión" icon="log-in" size="lg"/>
             </h:form>
         	
 			<div class="letra-login" style="font-size:1em;" align="center">
 				<a href="#">¿Has olvidado su contraseña?</a>
+			</div>
+			
+			<div>
+			  <h:outputText value="#{loginBean.alerta}" style="color: red; display: block; width:100%; text-align:center;"/>
 			</div>
   		</div>
 	</div>
