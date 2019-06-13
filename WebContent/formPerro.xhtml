@@ -30,7 +30,7 @@
 	<div class="wrapper">
 
   <header class="main-header">
-    <a href="admin.jsp" class="logo">
+    <a href="admin.xhtml" class="logo">
       <span class="logo-mini"><b>AD</b>H</span>
       <span class="logo-lg"><b>Admin</b> Huellitas</span>
     </a>
@@ -228,50 +228,52 @@
             <div class="box-header with-border">
               <h3 class="box-title">Registro Perrito</h3>
             </div>
-            <form role="form" action="PerroController" method="post">
+            <h:form role="form">
               <div class="box-body">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Nombre</label>
-                  <input type="text" name="nombre" class="form-control" id="ejemploImputNombre" placeholder="Nombre del perro" />
-                </div>
+              
+                <label>Nombre de la Mascota:</label> 
+                <h:inputText type="text" value="#{perroBean.perro.nombre}" class="form-control" placeholder="Nombre de la mascota" required="true"/>
                 
 	          	<div class="form-group">
 		            <div class="form-label-group">
-		              <label for="estado">Raza</label>
-    			<h:selectOneMenu class="form-control" id="Raza" value="#{RazaBean.combo}">
-	              <f:selectItem itemValue="" itemLabel="-- Selecione --" />
-				  <f:selectItems value ="#{razaBean.retornarRaza()}" var="raza" itemValue="#{raza.idRaza}" itemLabel="#{raza.nombreRaza}" />                 
-				</h:selectOneMenu>
+		              	<label for="estado">Raza</label>
+    					<h:selectOneMenu class="form-control" id="Raza" value="#{perroBean.combo}">
+	              			<f:selectItem itemValue="" itemLabel="-- Selecione --" />
+				  			<f:selectItems value ="#{razaBean.retornarRaza()}" var="raza" itemValue="#{raza.idRaza}" itemLabel="#{raza.nombreRaza}" />                 
+						</h:selectOneMenu>
 		            </div>
 	      		</div>
-
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Edad</label>
-                  <input type="text" name="edad" class="form-control" id="exampleInputPassword1" placeholder="edad" />
+	      		
+	      		<div class="form-group">
+		      		<label>Edad:</label> 
+	                <h:inputText type="number" value="#{perroBean.perro.edad}" class="form-control" placeholder="Edad de la mascota" required="true"/>
                 </div>
                 
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Estado</label>
-                  <input type="text" name="estado" class="form-control" id="exampleInputPassword1" placeholder="estado físico del perro" />
+	                <label>Estado:</label> 
+	                <h:inputText type="text" value="#{perroBean.perro.estado}" class="form-control" placeholder="Estado de la mascota" required="true"/>
                 </div>
                 
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Costo de Apadrinamiento</label>
-                  <input type="text" name="costo" class="form-control" id="exampleInputPassword1" placeholder="costo" />
+	                <label>Costo apadrinar:</label> 
+	                <h:inputText type="number" value="#{perroBean.perro.costoApadrinar}" class="form-control" placeholder="Costo de apadrinar" required="true"/>
                 </div>
                 
                 <div class="form-group">
-                  <label for="exampleInputFile">Foto</label>
-                  <input type="file" id="exampleInputFile" />
-                  <p class="help-block">Añade una imagen de perfil.</p>
+                  	<label for="exampleInputFile">Foto</label>
+                  	<input type="file" id="exampleInputFile" />
+                  	<p class="help-block">Añade una imagen de perfil.</p>
                 </div>
                 
                 <div class="box-footer">
-                  <button type="submit" class="btn btn-primary">Registrar</button>
+                  	<b:commandButton action="#{perroBean.registrarPerro()}" look="primary btn-block" value="Registrar perro" icon="log-in" size="lg"/>
                 </div>
               </div>
-            </form>
+            </h:form>
           </div>
+          <div>
+			<h:outputText value="#{loginBean.alerta}" style="color: red; display: block; width:100%; text-align:center;"/>
+		  </div>
          </div>
        <div class="col-md-3">
       </div>

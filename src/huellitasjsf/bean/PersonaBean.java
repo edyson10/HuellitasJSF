@@ -6,7 +6,7 @@ import javax.faces.bean.SessionScoped;
 import huellitasjsf.model.DAO.PersonaDAO;
 import huellitasjsf.model.entities.Persona;
 
-@ManagedBean
+@ManagedBean(name="personaBean")
 @SessionScoped
 public class PersonaBean {
 	
@@ -31,6 +31,4 @@ public class PersonaBean {
 		System.out.println(this.combo);
 		return persDao.list();
 	}
-	
-	
 }

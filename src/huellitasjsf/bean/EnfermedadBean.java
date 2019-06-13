@@ -6,12 +6,14 @@ import javax.faces.bean.SessionScoped;
 import huellitasjsf.model.DAO.EnfermedadDAO;
 import huellitasjsf.model.entities.Enfermedad;
 
-@ManagedBean
+@ManagedBean(name="enfermedadBean")
 @SessionScoped
 public class EnfermedadBean {
 
 	private Enfermedad enfermedad = new Enfermedad();
 	private Integer combo;
+	String alerta = "";
+	String alerta2 = "";
 	
 	public Enfermedad getEnfermedad() {
 		return enfermedad;
@@ -32,5 +34,19 @@ public class EnfermedadBean {
 		return enferDao.list();
 	}
 	
-	
+	public String registrarEnfermedad() {
+		EnfermedadDAO eDao = new EnfermedadDAO();
+		Enfermedad e = eDao.findByField("nombreEnfermedad", enfermedad.getNombreEnfermedad());
+		
+		if (e != null) {
+			this.alerta = "Error al registrarse: enfermedad ya existente";
+			System.out.println("Ya existe");
+			return "registros";
+		} else {
+			eDao.insert(enfermedad);
+			this.alerta = "";
+			this.alerta2 = "";
+			return "admin";
+		}	
+	}
 }

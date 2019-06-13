@@ -29,7 +29,7 @@
 	<div class="wrapper">
 
   <header class="main-header">
-    <a href="admin.jsp" class="logo">
+    <a href="admin.xhtml" class="logo">
       <span class="logo-mini"><b>AD</b>H</span>
       <span class="logo-lg"><b>Admin</b> Huellitas</span>
     </a>
@@ -175,7 +175,7 @@
               </li>
               <li class="user-footer">
                 <div class="pull-right">
-                  <a href="login.jsp" class="btn btn-default btn-flat">Cerrar Sesion</a>
+                  <a href="login.xhtml" class="btn btn-default btn-flat">Cerrar Sesion</a>
                 </div>
               </li>
             </ul>
@@ -227,17 +227,17 @@
             <div class="box-header with-border" align="center">
               <h3 class="box-title">Registro Ciudad</h3>
             </div>
-            <form role="form" action="CiudadController" method="post">
+            <h:form role="form" method="post">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Nombre de la ciudad</label>
-                  <input type="text" name="ciudad" class="form-control" placeholder="Digite el nombre de la ciudad" />
+	                <label>Nombre de la ciudad</label> 
+	                <h:inputText type="text" value="#{ciudadBean.ciudad.nombreCiudad}" class="form-control" placeholder="Nombre de la ciudad" required="true"/>
                 </div>
                 <div class="box-footer">
-                  <button type="submit" class="btn btn-primary">Agregar</button>
+                  	<b:commandButton action="#{ciudadBean.registrarCiudad()}" look="primary btn-block" value="Registrar ciudad" icon="log-in" size="lg"/>
                 </div>
               </div>
-            </form>
+            </h:form>
           </div>
       	</div>
         <div class="col-md-4">
@@ -245,17 +245,17 @@
             <div class="box-header with-border" align="center">
               <h3 class="box-title">Registro Raza</h3>
             </div>
-            <form role="form" method="post" action="RazaController">
+            <h:form role="form" method="post">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Raza</label>
-                  <input type="text" class="form-control" name="raza" id="ejemploImputNombre" placeholder="Nombre de la raza" />
+	                <label>Enfermedad</label> 
+	                <h:inputText type="text" value="#{razaBean.razaR.nombreRaza}" class="form-control" placeholder="Nombre de la raza" required="true"/>
                 </div>
                 <div class="box-footer">
-                  <button type="submit" class="btn btn-primary">Agregar</button>
+                  	<b:commandButton action="#{razaBean.registrarRaza()}" look="primary btn-block" value="Registrar raza" icon="log-in" size="lg"/>
                 </div>
               </div>
-            </form>
+            </h:form>
           </div>
         </div>
         <div class="col-md-2">
@@ -270,17 +270,17 @@
             <div class="box-header with-border" align="center">
               <h3 class="box-title" >Registro Enfermedad</h3>
             </div>
-            <form role="form" method="post" action="EnfermedadController">
+            <h:form role="form" method="post">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Enfermedad</label>
-                  <input type="text" class="form-control" name="enfermedad" id="ejemploImputNombre" placeholder="Nombre de la enfermedad" />
+	                <label>Enfermedad</label> 
+	                <h:inputText type="text" value="#{enfermedadBean.enfermedad.nombreEnfermedad}" class="form-control" placeholder="Nombre de la raza" required="true"/>
                 </div>
                 <div class="box-footer">
-                  <button type="submit" class="btn btn-primary">Agregar</button>
+                  	<b:commandButton action="#{enfermedadBean.registrarEnfermedad()}" look="primary btn-block" value="Registrar enfermedad" icon="log-in" size="lg"/>
                 </div>
               </div>
-            </form>
+            </h:form>
           </div>
          </div>
        </div>

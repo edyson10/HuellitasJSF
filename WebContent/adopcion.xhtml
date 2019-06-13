@@ -29,7 +29,7 @@
 	<div class="wrapper">
 
   <header class="main-header">
-    <a href="admin.jsp" class="logo">
+    <a href="admin.xhtml" class="logo">
       <span class="logo-mini"><b>AD</b>H</span>
       <span class="logo-lg"><b>Admin</b> Huellitas</span>
     </a>
@@ -227,7 +227,7 @@
             <div class="box-header with-border" align="center">
               <h3 class="box-title">Adopción</h3>
             </div>
-            <form>
+            <h:form role="form" method="post">
               <div class="box-body">
                 <div class="form-group">
                 
@@ -251,10 +251,12 @@
                   		<label for="exampleInputPassword1">Fecha inicio</label>
                   		<input type="date" name="fechaInicioAdop" class="form-control" placeholder=" " />
                 	</div>
-                	<button type="submit" class="btn btn-primary">Agregar Adopción</button>
+                	<div class="box-footer">
+                  		<b:commandButton action="#{adopcionBean.registrarAdoptador()}" look="primary btn-block" value="Registrar adoptador" icon="log-in" size="lg"/>
+                	</div>
                 </div>
               </div>
-            </form>
+            </h:form>
           </div>
          </div>
         <div class="col-md-4">
